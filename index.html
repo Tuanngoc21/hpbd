@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=D ancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .backgroundParty {
+      background-image: url("./img/z4355482874620_b1d041ab7f0dbd40efd64bfdac44b1f8.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Thêm các quy tắc CSS khác tại đây */
+  </style>
+  <style>
+    .gift-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+    }
+    .gift {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform 0.3s;
+      animation: shakeAnimation 1s infinite;
+    }
+    .gift:hover {
+      transform: scale(1.1);
+    }
+    @keyframes shakeAnimation {
+      0% { transform: rotate(0deg); }
+      20% { transform: rotate(-10deg); }
+      40% { transform: rotate(10deg); }
+      60% { transform: rotate(-10deg); }
+      80% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+  
+  <title>Chúc mừng sinh nhật </title>
+</head>
+<body>
+
+
+  <div class="startForm">
+    <div class="startLetter">
+      <div class="contentLetter"></div>
+      <img class="myAI" src="" alt="">
+      <div class="sticker"></div>
+      <button class="recieve"><i class="fa-solid fa-gift"></i></button>
+    </div>
+  </div>
+
+  <div class="backgroundParty">
+    <img class="balloon1 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
+    <img class="balloon2 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
+    <img class="bannerParty" src="./img/makeupspa-kit-theme-happy-birthday-bunting-paper-banner-party-supply-261454.png" alt="">
+    <div class="gift-container">
+      <img class="gift" id="gift1" src="./img/zyro-image.png" alt="Gift 1">
+      <img class="gift" id="gift2" src="/img/zyro-image.png" alt="Gift 2">
+    </div>
+    <div class="letterForm">
+      <input type="checkbox" id="mess">
+      <div class="content">
+        <div class="mainContent"></div>
+        <div class="img1"><img class="img" src="" alt=""></div>
+      </div>
+      <label class="designBox" for="mess"></label>
+    </div>
+  </div>
+  
+    </style>
+   <script>
+    document.getElementById("gift1").addEventListener("click", function() {
+      window.location.href = "link_cua_qua_1.html"; // Thay thế link_cua_qua_1.html bằng đường dẫn thích hợp cho phần chuyển tiếp của quà 1
+    });
+
+    document.getElementById("gift2").addEventListener("click", function() {
+      window.location.href = "link_cua_qua_2.html"; // Thay thế link_cua_qua_2.html bằng đường dẫn thích hợp cho phần chuyển tiếp của quà 2
+    });
+  </script>
+
+  <script src="./index.js"></script>
+</body>
+</html>
