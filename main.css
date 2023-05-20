@@ -154,6 +154,30 @@ body {
     animation: animateBanner 1s ease-in-out 1s infinite alternate;
     z-index: 5;
 }
+.letter {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-image: url('./img/bucthu.jpg'); /* Thay thế duong_dan_den_hinh_anh.jpg bằng đường dẫn tới hình ảnh của bạn */
+    background-size: cover;
+    background-position: center;
+    z-index: 999;
+  }
+  
+  .letter h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .letter p {
+    font-size: 24px;
+    color: #666;
+  }
+  
 
 @keyframes animateBalloon {
     to {

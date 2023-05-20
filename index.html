@@ -76,9 +76,20 @@
     <img class="balloon2 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
     <img class="bannerParty" src="./img/makeupspa-kit-theme-happy-birthday-bunting-paper-banner-party-supply-261454.png" alt="">
     <div class="gift-container">
-      <img class="gift" id="gift1" src="./img/zyro-image.png" alt="Gift 1">
-      <img class="gift" id="gift2" src="/img/zyro-image.png" alt="Gift 2">
+      <img class="gift" id="gift1" src="./img/zyro-image (2).png" alt="Gift 1">
+      <img class="gift" id="gift2" src="/img/zyro-image (3).png" alt="Gift 2">
     </div>
+    <div id="letter1" class="letter">
+      <h2>M mở cái này đầu tiên hả</h2>
+      <p>Chúc mừng sinh nhật tuổi 19! Chúc m có một ngày sinh nhật thật vui vẻ và ý nghĩa. Mong rằng tuổi 19 sẽ mang đến cho m nhiều niềm vui, thành công và những trải nghiệm đáng nhớ. Hãy tiếp tục nỗ lực và phấn đấu để đạt được những ước mơ và mục tiêu trong cuộc sống. Xin chúc m luôn khỏe mạnh, hạnh phúc và tràn đầy năng lượng. Sinh nhật vui vẻ </p>
+    </div>
+    
+    <div id="letter2" class="letter">
+      <h2></h2>
+      <p>Thật ra  cái này t cũng không muốn viết mô, vì đây là sinh nhật m t nghĩ sau này t sẽ nói ra nhưng mà sợ t sẽ không có cơ hội nữa. Đọc đến đây thì m có thể đóng lại rồi để ngày mai hẵng đọc.
+Nói thì m không tin đâu, m từng là người con gái quan trọng nhất đối với t ở quá khứ và hiện tại đều thế, m là người con gái duy nhất mà khiến t rơi nước mắt, trước đây t chưa từng nghĩ t có thể khóc bởi 1 lí do gì, nhưng mà sau khi gặp m lại khác. T chưa từng thương ai nhiều đến thế cả. Nếu mà t có 1 điều ước thì t chỉ ước quay lại năm ngoái để yêu m với thương m nhiều hơn thôi. Nhiều đêm mơ mà trong vô thức t còn nói được t yêu m nữa. Nhưng mà nói rứa thôi chớ t cũng chưa từng nghĩ t với m có thể quay lại hay còn là gì của nhau nữa. Dù sao thì bây giờ cũng là sinh nhật m, t cũng lấy hết can đảm để nói ra, ít nhất cũng vơi đi nhất niệm trong lòng t, t cũng sẽ có thể từ bỏ. Chúc mừng sinh nhật của m nhé. </p>
+    </div>
+    
     <div class="letterForm">
       <input type="checkbox" id="mess">
       <div class="content">
@@ -90,16 +101,54 @@
   </div>
   
     </style>
-   <script>
-    document.getElementById("gift1").addEventListener("click", function() {
-      window.location.href = "link_cua_qua_1.html"; // Thay thế link_cua_qua_1.html bằng đường dẫn thích hợp cho phần chuyển tiếp của quà 1
-    });
-
-    document.getElementById("gift2").addEventListener("click", function() {
-      window.location.href = "link_cua_qua_2.html"; // Thay thế link_cua_qua_2.html bằng đường dẫn thích hợp cho phần chuyển tiếp của quà 2
-    });
-  </script>
+    <script>
+      document.getElementById("gift1").addEventListener("click", function() {
+        openLetter("letter1"); // Thay thế "letter1" bằng ID phù hợp cho bức thư 1
+      });
+    
+      document.getElementById("gift2").addEventListener("click", function() {
+        openLetter("letter2"); // Thay thế "letter2" bằng ID phù hợp cho bức thư 2
+      });
+    
+      function openLetter(letterId) {
+        // Ẩn tất cả các bức thư trước khi mở bức thư mới
+        var letters = document.getElementsByClassName("letter");
+        for (var i = 0; i < letters.length; i++) {
+          letters[i].style.display = "none";
+        }
+    
+        // Hiển thị bức thư được chọn
+        var letterElement = document.getElementById(letterId);
+        letterElement.style.display = "block";
+      }
+    </script>
+    <script>
+      function showTextByParagraph(elementId, delay) {
+        const element = document.getElementById(elementId);
+        const paragraphs = element.getElementsByTagName("p");
+        let index = 0;
+    
+        function displayNextParagraph() {
+          if (index < paragraphs.length) {
+            paragraphs[index].style.display = "block";
+            index++;
+            setTimeout(displayNextParagraph, delay);
+          }
+        }
+    
+        displayNextParagraph();
+      }
+    
+      const letter1Delay = 1000; // Trễ 1000ms giữa mỗi đoạn văn bản trong bức thư 1
+      const letter2Delay = 1000; // Trễ 1000ms giữa mỗi đoạn văn bản trong bức thư 2
+    
+      showTextByParagraph("letter1", letter1Delay);
+      showTextByParagraph("letter2", letter2Delay);
+    </script>
+    
+        </script>
 
   <script src="./index.js"></script>
+  
 </body>
 </html>
